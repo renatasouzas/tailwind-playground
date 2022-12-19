@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-bold text-lg
+  }
+
+  table {
+    @apply text-left w-full border-separate border-spacing-y-1
+  }
+
+  thead {
+    @apply bg-gray-200 text-gray-300
+  }
+
+  th {
+    @apply py-3 px-10 h-8
+  }
+
+  .btn {
+    @apply h-10 min-w-[150px] rounded-lg uppercase text-white font-bold text-sm hover:shadow-md hover:brightness-90 bg-orange
+  }
+
+  .btn--success {
+    @apply bg-cyan-200
+  }
+
+  .btn--danger {
+    @apply bg-red
+  }
+
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply h-10 w-full shadow text-gray-300 text-sm py-1 px-4 rounded-lg border border-gray-300 focus:border-cyan focus:ring-cyan focus:bg-cyan-100
+  }
+}
+
+@layer components {
+  .menu__item {
+    @apply py-4 px-8 cursor-pointer hover:bg-cyan-300
+  }
+
+  .tab {
+    @apply py-2 px-10 border-2 border-b-0 rounded-lg rounded-b-none cursor-pointer font-bold
+  }
+
+  .tab--active {
+    @apply text-white bg-orange border-orange
+  }
+
+  .tab--inactive {
+    @apply bg-gray-300 text-white border-gray-300
+  }
+}
